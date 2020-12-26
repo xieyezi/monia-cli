@@ -1,0 +1,79 @@
+{
+  "name": "burnish-cli",
+  "version": "2.0.1",
+  "description": "A cli for creating vue / react /flutter projects ",
+  "keywords": [
+    "burnish-cli",
+    "react-cli",
+    "vue-cli",
+    "create-react-app",
+    "template",
+    "@vue/cli",
+    "cli",
+    "react",
+    "vue",
+    "webpack",
+    "sass",
+    "babel",
+    "typescript",
+    "stylelint",
+    "eslint",
+    "tslint",
+    "build",
+    "init"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"bin/**/*.js\" \"lib/**/*.js\"",
+    "commit": "git-cz"
+  },
+  "bin": {
+    "burnish-cli": "bin/burnish-cli.js"
+  },
+  "repository": "https://github.com/burnish/burnish-cli.git",
+  "author": "burnish",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "didyoumean": "^1.2.1",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.2.4",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.0",
+    "ora": "^4.0.3",
+    "semver": "^7.1.1"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-customizable": "^6.2.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "cz-customizable": {
+    "config": ".cz-config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "npm run format",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.9"
+  }
+}
