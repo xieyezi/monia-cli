@@ -5,4 +5,4 @@ const REMOTE_URL = Object.freeze({
 	FLUTTER: 'https://github.com/xieyezi/flutter-Anniversary'
 })
 
-module.exports = REMOTE_URL
+export default REMOTE_URL
