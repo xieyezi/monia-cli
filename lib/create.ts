@@ -7,9 +7,8 @@ const logSymbols = require('log-symbols')
 const figlet = require('figlet')
 const downloadFromGithub = require('./downloadFromGithub')
 const REMOTE_URL  = require('./value')
-// let REMOTE_URL = 'https://github.com/xieyezi/vue-template.git' // 默认为Vue项目模板
 
-module.exports = async function create(projectName) {
+const createApp = async (projectName:string) => {
 	const cwd = process.cwd()
 	const targetDir = path.resolve(cwd, projectName)
 	const name = path.relative(cwd, projectName)
@@ -149,3 +148,4 @@ module.exports = async function create(projectName) {
 			process.exit(-1)
 		})
 }
+export default createApp
