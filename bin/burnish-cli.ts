@@ -30,21 +30,21 @@ program.arguments('<command>').action((cmd) => {
 	program.outputHelp()
 	console.log('  ' + chalk.red(`Unknown command ${chalk.yellow(cmd)}`))
 	console.log()
-	suggestCommands(cmd)
+	suggestCommands(program, cmd)
 })
 
 /**
  * enhance common error messages
  */
-enhanceErrorMessages('missingArgument', (argName: string) => {
+enhanceErrorMessages(program, 'missingArgument', (argName: string) => {
 	return `Missing required argument ${chalk.yellow(`<${argName}>`)}.`
 })
 
-enhanceErrorMessages('unknownOption', (optionName: string) => {
+enhanceErrorMessages(program, 'unknownOption', (optionName: string) => {
 	return `Unknown option ${chalk.yellow(optionName)}.`
 })
 
-enhanceErrorMessages('optionMissingArgument', (option, flag) => {
+enhanceErrorMessages(program, 'optionMissingArgument', (option, flag) => {
 	return (
 		`Missing required argument for option ${chalk.yellow(option.flags)}` + (flag ? `, got ${chalk.yellow(flag)}` : '')
 	)

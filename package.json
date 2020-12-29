@@ -1,6 +1,6 @@
 {
   "name": "burnish-cli",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "description": "A cli for creating vue / react /flutter projects ",
   "keywords": [
     "burnish-cli",
@@ -26,10 +26,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"bin/**/*.ts\" \"lib/**/*.ts\"",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "start": "ts-node bin/burnish-cli.ts",
+    "build": "tsc -p ."
   },
   "bin": {
-    "burnish-cli": "bin/burnish-cli.js"
+    "burnish-cli": "dist/bin/burnish-cli.js"
   },
   "repository": "https://github.com/burnish/burnish-cli.git",
   "author": "burnish",

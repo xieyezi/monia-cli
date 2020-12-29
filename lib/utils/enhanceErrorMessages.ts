@@ -1,7 +1,7 @@
-const program = require('commander')
-const chalk = require('chalk')
+import chalk from 'chalk'
+import { CommanderStatic } from 'commander'
 
-const enhanceErrorMessages = (methodName, log) => {
+const enhanceErrorMessages = (program: CommanderStatic, methodName: string, log: (...args: any[]) => void) => {
 	program.Command.prototype[methodName] = function(...args) {
 		if (methodName === 'unknownOption' && this._allowUnknownOption) {
 			return

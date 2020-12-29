@@ -1,7 +1,8 @@
 import chalk from 'chalk'
 import didYouMean from 'didYouMean'
+import { CommanderStatic } from 'commander'
 
-const suggestCommands = (cmd) => {
+const suggestCommands = (program: CommanderStatic, cmd) => {
 	const availableCommands = program.commands.map((cmd) => {
 		return cmd._name
 	})
