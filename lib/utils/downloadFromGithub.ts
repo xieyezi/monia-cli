@@ -2,7 +2,7 @@ const download = require('download-git-repo')
 /**
  * download template from github
  */
-module.exports = function downloadFromGithub(url, name) {
+const downloadFromGithub = (url, name) => {
 	return new Promise((resolve, reject) => {
 		download(`direct:${url}`, name, { clone: true }, function(err) {
 			if (!err) {
@@ -11,3 +11,5 @@ module.exports = function downloadFromGithub(url, name) {
 		})
 	})
 }
+
+export default downloadFromGithub

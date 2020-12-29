@@ -1,7 +1,7 @@
 const program = require('commander')
 const chalk = require('chalk')
 
-const enhanceErrorMessages =  (methodName, log) => {
+const enhanceErrorMessages = (methodName, log) => {
 	program.Command.prototype[methodName] = function(...args) {
 		if (methodName === 'unknownOption' && this._allowUnknownOption) {
 			return

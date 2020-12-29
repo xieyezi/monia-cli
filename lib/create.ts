@@ -6,9 +6,9 @@ const chalk = require('chalk')
 const logSymbols = require('log-symbols')
 const figlet = require('figlet')
 const downloadFromGithub = require('./downloadFromGithub')
-const REMOTE_URL  = require('./value')
+const REMOTE_URL = require('./value')
 
-const createApp = async (projectName:string) => {
+const createApp = async (projectName: string) => {
 	const cwd = process.cwd()
 	const targetDir = path.resolve(cwd, projectName)
 	const name = path.relative(cwd, projectName)

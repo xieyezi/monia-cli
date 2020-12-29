@@ -1,35 +1,18 @@
-#!/usr/bin/env node
-const config = require('../package.json')
-const chalk = require('chalk')
-const program = require('commander')
-const semver = require('semver')
+import * as config from '../package.json'
+import chalk from 'chalk'
+import program from 'commander'
+import didYouMean from 'didYouMean'
+import create from '../lib/create'
+import { checkNodeVersion, suggestCommands, enhanceErrorMessages } from '../lib/utils'
+
 const requiredVersion = config.engines.node
-const create = require('../lib/create')
-const enhanceErrorMessages = require('../lib/enhanceErrorMessages')
-const didYouMean = require('didyoumean')
-// Setting edit distance to 60% of the input string's length
 didYouMean.threshold = 0.6
 
-function checkNodeVersion(wanted, id) {
-	if (!semver.satisfies(process.version, wanted)) {
-		console.log(
-			chalk.red(
-				'You are using Node ' +
-					process.version +
-					', but this version of ' +
-					id +
-					' requires Node ' +
-					wanted +
-					'.\nPlease upgrade your Node version.'
-			)
-		)
-		process.exit(1)
-	}
-}
 /**
  * Check node version required >=9.0
  */
 checkNodeVersion(requiredVersion, '@burnish/cli')
+
 /**
  * start create app
  */
@@ -53,11 +36,11 @@ program.arguments('<command>').action((cmd) => {
 /**
  * enhance common error messages
  */
-enhanceErrorMessages('missingArgument', (argName) => {
+enhanceErrorMessages('missingArgument', (argName: string) => {
 	return `Missing required argument ${chalk.yellow(`<${argName}>`)}.`
 })
 
-enhanceErrorMessages('unknownOption', (optionName) => {
+enhanceErrorMessages('unknownOption', (optionName: string) => {
 	return `Unknown option ${chalk.yellow(optionName)}.`
 })
 
@@ -78,13 +61,4 @@ program.on('--help', () => {
 })
 if (!process.argv.slice(2).length) {
 	program.outputHelp()
-}
-function suggestCommands(cmd) {
-	const availableCommands = program.commands.map((cmd) => {
-		return cmd._name
-	})
-	const suggestion = didYouMean(cmd, availableCommands)
-	if (suggestion) {
-		console.log('  ' + chalk.red(`Did you mean ${chalk.yellow(suggestion)}?`))
-	}
 }
