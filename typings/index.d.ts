@@ -25,16 +25,16 @@ declare namespace burnish {
 		/**
 		 * createVueApp
 		 */
-		createVueApp: (name: string, targetDir: string) => void
+		createVueApp: (projectName: string, targetDir: string) => void
 		/**
 		 * createReactApp
 		 */
 
-		createReactApp: (name: string, targetDir: string) => void
+		createReactApp: (projectName: string, targetDir: string) => void
 		/**
 		 * createFlutterApp
 		 */
-		createFlutterApp: (name: string, targetDir: string) => void
+		createFlutterApp: (projectName: string, targetDir: string) => void
 	}
 }
 declare const burnishCli: burnish.BurnishCli

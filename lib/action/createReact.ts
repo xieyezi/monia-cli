@@ -5,6 +5,7 @@ import chalk from 'chalk'
 import figlet from 'figlet'
 import inquirer from 'inquirer'
 import logSymbols from 'log-symbols'
+import child_process from 'child_process'
 import { downloadFromGithub } from '../utils'
 import REMOTE_URL from '../value'
 
@@ -84,7 +85,6 @@ const createReactApp = async (projectName: string, targetDir: string) => {
 						// 将node工作目录更改成构建的项目根目录下
 						process.chdir(`./${projectName}`)
 						// 安装项目依赖
-						const child_process = require('child_process')
 						if (package_manager === 'Yarn') {
 							child_process.execSync('yarn', { stdio: [0, 1] })
 						} else {
