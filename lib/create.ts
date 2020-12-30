@@ -1,13 +1,24 @@
-const path = require('path')
-const fs = require('fs-extra')
-const inquirer = require('inquirer')
-const Ora = require('ora')
-const chalk = require('chalk')
-const logSymbols = require('log-symbols')
-const figlet = require('figlet')
-const downloadFromGithub = require('./utils/downloadFromGithub')
+// const path = require('path')
+// const fs = require('fs-extra')
+// const inquirer = require('inquirer')
+// const Ora = require('ora')
+// const chalk = require('chalk')
+// const logSymbols = require('log-symbols')
+// const figlet = require('figlet')
+// const downloadFromGithub = require('./utils/downloadFromGithub')
 // const REMOTE_URL = require('./value')
-let REMOTE_URL = 'https://github.com/xieyezi/vue-template.git'
+
+import Ora from 'Ora'
+import path from 'path'
+import fs from 'fs-extra'
+import chalk from 'chalk'
+import figlet from 'figlet'
+import inquirer from 'inquirer'
+import logSymbols from 'log-symbols'
+import { downloadFromGithub } from './utils'
+import { createVueApp, createReactApp, createFlutterApp } from './action'
+
+// let REMOTE_URL = 'https://github.com/xieyezi/vue-template.git'
 
 const createApp = async (projectName: string) => {
 	const cwd = process.cwd()

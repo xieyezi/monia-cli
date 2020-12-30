@@ -25,7 +25,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"bin/**/*.ts\" \"lib/**/*.ts\"",
+    "lint": "eslint . --ext .js,.ts",
+    "lint-fix": "eslint . --fix --ext .js,.ts",
+    "format": "prettier --write \"bin/**/*.ts\" \"lib/**/*.ts\" \"typings/**/*.ts\"",
     "commit": "git-cz",
     "start": "ts-node bin/burnish-cli.ts",
     "build": "tsc -p ."
@@ -49,9 +51,11 @@
   },
   "devDependencies": {
     "@types/node": "^12.12.22",
+    "babel-eslint": "^10.1.0",
     "commitizen": "^4.0.3",
     "cz-customizable": "^6.2.0",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
