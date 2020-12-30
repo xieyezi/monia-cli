@@ -5,8 +5,9 @@ const Ora = require('ora')
 const chalk = require('chalk')
 const logSymbols = require('log-symbols')
 const figlet = require('figlet')
-const downloadFromGithub = require('./downloadFromGithub')
-const REMOTE_URL = require('./value')
+const downloadFromGithub = require('./utils/downloadFromGithub')
+// const REMOTE_URL = require('./value')
+let REMOTE_URL = 'https://github.com/xieyezi/vue-template.git'
 
 const createApp = async (projectName: string) => {
 	const cwd = process.cwd()
@@ -88,9 +89,9 @@ const createApp = async (projectName: string) => {
 			}
 		}
 	])
-	// if (framework === 'React') {
-	// 	REMOTE_URL = 'https://github.com/xieyezi/react-template.git'
-	// }
+	if (framework === 'React') {
+		REMOTE_URL = 'https://github.com/xieyezi/react-template.git'
+	}
 	// 一些提示 ···
 	console.log(chalk.white(`\n\n✨  Creating project in ${chalk.yellow(targetDir)}.`))
 	console.log(chalk.white(`🗃  Initializing git repository....\n`))

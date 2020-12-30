@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as config from '../package.json'
 import chalk from 'chalk'
 import program from 'commander'

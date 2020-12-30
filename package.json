@@ -31,7 +31,7 @@
     "build": "tsc -p ."
   },
   "bin": {
-    "burnish-cli": "dist/bin/burnish-cli.js"
+    "burnish-cli": "bin/burnish-cli.js"
   },
   "repository": "https://github.com/burnish/burnish-cli.git",
   "author": "burnish",
