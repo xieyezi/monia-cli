@@ -30,6 +30,7 @@
     "format": "prettier --write \"bin/**/*.ts\" \"lib/**/*.ts\" \"typings/**/*.ts\"",
     "commit": "git-cz",
     "start": "ts-node bin/burnish-cli.ts",
+    "watch": "tsc -w .",
     "build": "tsc -p ."
   },
   "bin": {
