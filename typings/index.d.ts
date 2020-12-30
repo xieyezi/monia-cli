@@ -21,7 +21,7 @@ declare namespace burnish {
 		/**
 		 * createApp
 		 */
-		createApp:(projectName: string) => void
+		createApp: (projectName: string) => void
 		/**
 		 * createVueApp
 		 */
@@ -37,5 +37,5 @@ declare namespace burnish {
 		createFlutterApp: (name: string, targetDir: string) => void
 	}
 }
-declare const burnishCli: burnish.BurnishCli;
-export = burnishCli;
+declare const burnishCli: burnish.BurnishCli
+export = burnishCli

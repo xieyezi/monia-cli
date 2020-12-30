@@ -27,7 +27,7 @@ program
 /***
  * output help information on unknown commands
  */
-program.arguments('<command>').action((cmd) => {
+program.arguments('<command>').action((cmd: NodeJS.Process) => {
 	program.outputHelp()
 	console.log('  ' + chalk.red(`Unknown command ${chalk.yellow(cmd)}`))
 	console.log()
