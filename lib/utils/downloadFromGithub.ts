@@ -7,6 +7,8 @@ const downloadFromGithub = (url: string, name: string) => {
 		download(`direct:${url}`, name, { clone: true }, function(err) {
 			if (!err) {
 				resolve()
+			} else {
+				reject(err)
 			}
 		})
 	})

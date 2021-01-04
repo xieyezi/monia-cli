@@ -7,11 +7,10 @@ import figlet from 'figlet'
 import inquirer from 'inquirer'
 import logSymbols from 'log-symbols'
 import child_process from 'child_process'
-
 import { downloadFromGithub } from '../utils'
 import REMOTE_URL from '../value'
 
-const COMMON = 'fluttertemplate'
+export const COMMON = 'fluttertemplate'
 const regDescription = 'description: A new Flutter project.'
 const regVersion = 'version: 1.0.0+1'
 
@@ -53,26 +52,31 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 		spinner.start()
 		downloadFromGithub(REMOTE_URL.FLUTTER, COMMON)
 			.then((res) => {
-				console.log('res', res)
-				shell.rm('-f', './pubspec.yaml')
-				shell.rm('-rf', './lib')
-				shell.mv(`${targetDir}/${COMMON}/lib`, `${targetDir}`)
-				shell.mv(`${targetDir}/${COMMON}/pubspec.yaml`, `${targetDir}`)
-				spinner.stop()
+				updateTargetFile(targetDir, spinner, description, version)
 			})
 			.catch((err) => {
-				console.log(logSymbols.error, err)
-				spinner.fail(chalk.red('Sorry, it must be something error,please check it out. \n'))
-				process.exit(-1)
+				console.log(err)
+				if (fs.existsSync(`${targetDir}/${COMMON}`)) {
+					updateTargetFile(targetDir, spinner, description, version)
+				} else {
+					console.log(logSymbols.error, err)
+					spinner.fail(chalk.red('Sorry, it must be something error,please check it out. \n'))
+					process.exit(-1)
+				}
 			})
 	} catch (error) {
 		console.log(error)
 	}
 }
 
-// update pubspec.yaml file
-const updatePubspec = (spinner: Ora.Ora, description: string, version: string) => {
-	fs.readFile(`./pubspec.yaml`, 'utf8', function(err, data) {
+// update target file
+const updateTargetFile = (targetDir: string, spinner: Ora.Ora, description: string, version: string) => {
+	shell.rm('-f', './pubspec.yaml')
+	shell.rm('-rf', './lib')
+	console.log('2222222')
+	shell.mv(`${targetDir}/${COMMON}/lib`, `${targetDir}`)
+	shell.mv(`${targetDir}/${COMMON}/pubspec.yaml`, `${targetDir}`)
+	fs.readFile('./pubspec.yaml', 'utf8', function(err, data) {
 		if (err) {
 			spinner.stop()
 			console.error(err)
@@ -85,13 +89,44 @@ const updatePubspec = (spinner: Ora.Ora, description: string, version: string) =
 			if (err) {
 				console.error(err)
 			} else {
-				// console.log(chalk.white(`📦  Installing additional dependencies...\n`))
-				console.log('write success!')
+				targetFileDisplayReplace('./lib')
+				spinner.stop()
+				console.log('end.....')
 			}
 			process.exit()
 		})
 	})
 }
-// move template file to targetDir
-const moveFile = () => {}
+
+const targetFileDisplayReplace = (filePath: string) => {
+	console.log(filePath)
+	//根据文件路径读取文件，返回文件列表
+	fs.readdir(filePath, 'utf8', function(err, files) {
+		if (err) {
+			console.error(err)
+		} else {
+			console.log(files)
+			files.forEach(function(filename) {
+				//获取当前文件的绝对路径
+				let filedir = path.join(filePath, filename)
+				//根据文件路径获取文件信息，返回一个fs.Stats对象
+				fs.stat(filedir, function(eror, stats) {
+					if (eror) {
+						console.warn('获取文件stats失败')
+					} else {
+						let isFile = stats.isFile() //是文件
+						let isDir = stats.isDirectory() //是文件夹
+						if (isFile) {
+							console.log(filedir)
+						}
+						if (isDir) {
+							targetFileDisplayReplace(filedir) //递归，如果是文件夹，就继续遍历该文件夹下面的文件
+						}
+					}
+				})
+			})
+		}
+	})
+}
+
 export default createFlutterApp
