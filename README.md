@@ -1,5 +1,5 @@
 
-Language: EN | [中文简体]](README-CN.md)
+Language: EN | [中文简体](README-CN.md)
 
 This is one cli that supports Vue, React, and Flutter at the same time.
 
