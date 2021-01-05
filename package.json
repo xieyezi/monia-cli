@@ -1,7 +1,7 @@
 {
   "name": "burnish-cli",
   "version": "1.0.0",
-  "description": "A cli for creating vue / react /flutter projects ",
+  "description": "A cli for creating vue / react / flutter projects ",
   "keywords": [
     "burnish-cli",
     "react-cli",
@@ -9,6 +9,10 @@
     "create-react-app",
     "template",
     "@vue/cli",
+    "vite",
+    "flutter-cli",
+    "flutter cli",
+    "flutter",
     "cli",
     "react",
     "vue",
@@ -36,7 +40,7 @@
   "bin": {
     "burnish-cli": "bin/burnish-cli.js"
   },
-  "repository": "https://github.com/burnish/burnish-cli.git",
+  "repository": "https://github.com/xieyezi/burnish-cli.git",
   "author": "burnish",
   "license": "ISC",
   "dependencies": {

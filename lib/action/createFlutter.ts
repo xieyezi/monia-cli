@@ -69,7 +69,7 @@ const targetFileDisplayReplace = (projectName: string, filePath: string) => {
 	files.forEach(function(filename) {
 		let filedir = path.join(filePath, filename)
 		if (fs.statSync(filedir).isFile() && filedir.includes('.dart')) {
-			console.log(filedir)
+			console.log(`generate ${filedir}`)
 			replace({
 				regex: COMMON,
 				replacement: projectName,
