@@ -9,7 +9,7 @@ declare namespace burnish {
 		/**
 		 * downloadFromGithub git respositories
 		 */
-		downloadFromGithub: (url: string, name: string) => Promise
+		downloadFromGithub: (url: string, name: string) => Promise<void>
 		/**
 		 * enhanceErrorMessages for burnish@cli
 		 */
@@ -21,20 +21,20 @@ declare namespace burnish {
 		/**
 		 * createApp
 		 */
-		createApp: (projectName: string) => void
+		createApp: (projectName: string) => Promise<void>
 		/**
 		 * createVueApp
 		 */
-		createVueApp: (projectName: string, targetDir: string) => void
+		createVueApp: (projectName: string, targetDir: string) => Promise<void>
 		/**
 		 * createReactApp
 		 */
 
-		createReactApp: (projectName: string, targetDir: string) => void
+		createReactApp: (projectName: string, targetDir: string) => Promise<void>
 		/**
 		 * createFlutterApp
 		 */
-		createFlutterApp: (projectName: string, targetDir: string) => void
+		createFlutterApp: (projectName: string, targetDir: string) => Promise<void>
 	}
 }
 declare const burnishCli: burnish.BurnishCli
