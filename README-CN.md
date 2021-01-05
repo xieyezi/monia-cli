@@ -1,37 +1,37 @@
 
-Language: EN | [中文简体]](README-CN.md)
+Language: 中文简体 | [EN](https://github.com/xieyezi/burnish-cli)
 
-This is one cli that supports Vue, React, and Flutter at the same time.
+这是一款同时支持 Vue、React、Flutter 的脚手架。
 
-You may have questions 🤔️: Does `flutter` also count as front-end?
+你可能会有疑问🤔️ :  `flutter` 也算前端吗?
 
-To tell you the truth, flutter is the official front-end team of Google. Unfortunately, the front-end er is in constant toss.
+实话告诉你吧，flutter 就是 谷歌官方前端团队搞出来的.很不幸，前端er 就是处于不断的折腾中.
 
-So `burnish-cli` is here.
+所以 `burnish-cli` 他来了.
 
->Note: Before using `burnish-cli` to create a `flutter` project, please make sure you have installed the `flutter` development environment locally.
-### feature
-  🌈 Quickly generate project templates   
+> 注：使用 `burnish-cli` 创建 `flutter`项目之前，请确保你的本地已经安装了`flutter`的开发环境.
+### 特性
+  🌈 快速生成项目模板   
 
-  🌟 Support `react + ts + hooks` project
+  🌟 支持 `react + ts + hooks` 项目  
 
-  💫 Support `Vue 2.x` project      
+  💫 支持`Vue 2.x` 项目      
 
-  💫 Support `Vue 3.x` project (`vite + typescript`)        
+  💫 支持 `Vue 3.x` 项目(`vite + typescript`)         
 
-  🌟 Support `flutter` project        
+  🌟 支持 `flutter` 项目        
 
-  ❎ Error message       
+  ❎ 错误提示       
  
-  🔗 Command Association     
+  🔗 命令联想☁         
 
-### install
+### 安装
 
  ```js
   yarn global add burnish-cli  ||  npm isntall -g burnish-cli
  ```
 
-### Options and  Commands
+### 参数和命令 
 
 ```
 Usage: burnish-cli <command> [options]
@@ -44,7 +44,7 @@ Commands:
   create <app-name>    Create a project with template from burnish react template
 ```
 
-### Template directory
+### 模版目录
 
 #### flutter 
 
