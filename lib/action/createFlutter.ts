@@ -13,6 +13,7 @@ import { downloadFromGithub } from '../utils'
 import REMOTE_URL from '../value'
 
 export const COMMON = 'fluttertemplate'
+const regName = 'name: fluttertemplate'
 const regDescription = 'description: A new Flutter project.'
 const regVersion = 'version: 1.0.0+1'
 
@@ -94,16 +95,23 @@ const updateTargetFile = async (
 	shell.rm('-f', `${targetDir}/pubspec.yaml`)
 	shell.mv(`${targetDir}/${COMMON}/lib`, `${targetDir}`)
 	shell.mv(`${targetDir}/${COMMON}/pubspec.yaml`, `${targetDir}`)
-	await replace({
-		regex: regVersion,
-		replacement: `version: ${version}`,
+	replace({
+		regex: regName,
+		replacement: `name: ${projectName}`,
 		paths: [`${targetDir}/pubspec.yaml`],
 		recursive: true,
 		silent: true
 	})
-	await replace({
+	replace({
 		regex: regDescription,
 		replacement: `description: ${description}.`,
+		paths: [`${targetDir}/pubspec.yaml`],
+		recursive: true,
+		silent: true
+	})
+	replace({
+		regex: regVersion,
+		replacement: `version: ${version}`,
 		paths: [`${targetDir}/pubspec.yaml`],
 		recursive: true,
 		silent: true
@@ -118,26 +126,6 @@ const updateTargetFile = async (
 	console.log(chalk.cyan(`${chalk.gray('$')} flutter run\n\n`))
 	console.log(chalk.white(figlet.textSync('brnish-cli')))
 	process.exit()
-	// fs.readFile('./pubspec.yaml', 'utf8', function(err, data) {
-	// 	if (err) {
-	// 		spinner.stop()
-	// 		console.error(err)
-	// 		return
-	// 	}
-	// 	let fileContent = data
-	// 	fileContent = fileContent.replace(regVersion, `version: ${version}`)
-	// 	fileContent = fileContent.replace(regDescription, `description: ${description}.`)
-	// 	fs.writeFile(`./pubspec.yaml`, fileContent, 'utf8', function(err) {
-	// 		if (err) {
-	// 			console.error(err)
-	// 		} else {
-	// 			targetFileDisplayReplace('lib')
-	// 			spinner.stop()
-	// 			console.log('end.....')
-	// 		}
-	// 		process.exit()
-	// 	})
-	// })
 }
 
 export default createFlutterApp
