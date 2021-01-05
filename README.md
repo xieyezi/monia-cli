@@ -11,19 +11,19 @@ So `burnish-cli` is here.
 
 >Note: Before using `burnish-cli` to create a `flutter` project, please make sure you have installed the `flutter` development environment locally.
 ### feature
-  💪 Quickly generate project templates   
+  💪 quickly generate project templates   
 
-  🌈  Support `react + ts + hooks` project
+  🌈  support `react + ts + hooks` project
 
-  🌈  Support `Vue 2.x` project      
+  🌈  support `Vue 2.x` project      
 
-  🌈  Support `Vue 3.x` project (`vite + typescript`)        
+  🌈  support `Vue 3.x` project (`vite + typescript`)        
 
-  🌈  Support `flutter` project        
+  🌈  support `flutter` project        
 
-  🌟 Error message       
+  🌟 error message       
  
-  🔗 Command Association     
+  🔗 command Association     
 
 ### install
 
