@@ -1,15 +1,17 @@
 
-Language: 中文简体 | [EN](https://github.com/xieyezi/burnish-cli)
+Language: 中文简体 | [EN](https://github.com/xieyezi/ monia-cli)
 
-这是一款同时支持 Vue、React、Flutter 的脚手架。
+什么是 monia ? monia 取名灵感来自于希腊神话掌握和谐的女神：[哈耳摩尼亚](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1))。寓意着 "联系所有人的爱"。从而达到和谐共存的状态。
+
+所以这是一款同时支持 Vue、React、Flutter 的脚手架。
 
 你可能会有疑问🤔️ :  `flutter` 也算前端吗?
 
 实话告诉你吧，flutter 就是 谷歌官方前端团队搞出来的.很不幸，前端er 就是处于不断的折腾中.
 
-所以 `burnish-cli` 他来了.
+所以 ` monia-cli` 他来了.
 
-> 注：使用 `burnish-cli` 创建 `flutter`项目之前，请确保你的本地已经安装了`flutter`的开发环境.
+> 注：使用 ` monia-cli` 创建 `flutter`项目之前，请确保你的本地已经安装了`flutter`的开发环境.
 ### 特性
   💡 快速生成项目模板   
 
@@ -28,20 +30,20 @@ Language: 中文简体 | [EN](https://github.com/xieyezi/burnish-cli)
 ### 安装
 
  ```js
-  yarn global add burnish-cli  ||  npm install -g burnish-cli
+  yarn global add  monia-cli  ||  npm install -g  monia-cli
  ```
 
 ### 参数和命令 
 
 ```
-Usage: burnish-cli <command> [options]
+Usage:  monia <command> [options]
 
 Options:
   -V, --version      output the version number
   -h, --help         output usage information
 
 Commands:
-  create <app-name>    Create a project with template from burnish template
+  create <app-name>    Create a project with template from  monia template
 ```
 
 ### 模版目录
