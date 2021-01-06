@@ -28,7 +28,7 @@ Language: 中文简体 | [EN](https://github.com/xieyezi/burnish-cli)
 ### 安装
 
  ```js
-  yarn global add burnish-cli  ||  npm isntall -g burnish-cli
+  yarn global add burnish-cli  ||  npm install -g burnish-cli
  ```
 
 ### 参数和命令 
