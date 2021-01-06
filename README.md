@@ -116,8 +116,6 @@ Commands:
 ├── babel.config.js
 ├── package.json
 ├── public
-│   ├── favicon.ico
-│   └── index.html
 ├── src
 │   ├── App.vue
 │   ├── assets
