@@ -28,7 +28,7 @@ So `burnish-cli` is here.
 ### install
 
  ```js
-  yarn global add burnish-cli  ||  npm isntall -g burnish-cli
+  yarn global add burnish-cli  ||  npm install -g burnish-cli
  ```
 
 ### Options and  Commands
