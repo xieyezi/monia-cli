@@ -12,7 +12,7 @@ didYouMean.threshold = 0.6
 /**
  * Check node version required >=9.0
  */
-checkNodeVersion(requiredVersion, '@burnish/cli')
+checkNodeVersion(requiredVersion, '@monia/cli')
 
 /**
  * start create app
@@ -20,7 +20,7 @@ checkNodeVersion(requiredVersion, '@burnish/cli')
 program.version(config.version).usage('<command> [options]')
 program
 	.command('create <app-name>')
-	.description('  Create a project with template from burnish git repository.')
+	.description('  Create a project with template from monia git repository.')
 	.action((name, cmd) => {
 		create(name)
 	})
@@ -57,7 +57,7 @@ program.parse(process.argv)
  */
 program.on('--help', () => {
 	console.log()
-	console.log(`  Run ${chalk.cyan('burnish-cli <command> --help')} for detailed usage of given command.`)
+	console.log(`  Run ${chalk.cyan('monia <command> --help')} for detailed usage of given command.`)
 	console.log()
 })
 if (!process.argv.slice(2).length) {

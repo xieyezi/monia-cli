@@ -49,7 +49,7 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 		// 切换当前目录到目标文件夹
 		process.chdir(`./${projectName}`)
 		const spinner = Ora({
-			text: `Download template from burnish git repository... This might take a while....\n`
+			text: `Download template from monia git repository... This might take a while....\n`
 		})
 		// spinner.start()
 		await downloadFromGithub(REMOTE_URL.FLUTTER, COMMON).catch((err) => {
@@ -124,7 +124,7 @@ const updateTargetFile = async (
 	console.log(chalk.white('👉  Get started with the following commands:\n'))
 	console.log(`${chalk.cyan(`${chalk.gray('$')} cd ${projectName}`)}`)
 	console.log(chalk.cyan(`${chalk.gray('$')} flutter run\n\n`))
-	console.log(chalk.white(figlet.textSync('brnish-cli')))
+	console.log(chalk.white(figlet.textSync('monia-cli')))
 	process.exit()
 }
 

@@ -1,7 +1,7 @@
 import { CommanderStatic } from 'commander'
 
-declare namespace burnish {
-	interface BurnishCli {
+declare namespace monia {
+	interface MoniaCli {
 		/**
 		 * Check node version required >=9.0
 		 */
@@ -11,11 +11,11 @@ declare namespace burnish {
 		 */
 		downloadFromGithub: (url: string, name: string) => Promise<void>
 		/**
-		 * enhanceErrorMessages for burnish@cli
+		 * enhanceErrorMessages for  monia@cli
 		 */
 		enhanceErrorMessages: (program: CommanderStatic, methodName: string, log: any) => void
 		/**
-		 * suggestCommands for burnish@cli
+		 * suggestCommands for  monia@cli
 		 */
 		suggestCommands: (program: CommanderStatic, cmd: any) => void
 		/**
@@ -37,5 +37,5 @@ declare namespace burnish {
 		createFlutterApp: (projectName: string, targetDir: string) => Promise<void>
 	}
 }
-declare const burnishCli: burnish.BurnishCli
-export = burnishCli
+declare const moniaCli: monia.MoniaCli
+export = moniaCli

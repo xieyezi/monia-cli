@@ -1,9 +1,9 @@
 {
-  "name": "burnish-cli",
-  "version": "1.0.3",
+  "name": "monia-cli",
+  "version": "1.0.0",
   "description": "A cli for creating vue / react / flutter projects ",
   "keywords": [
-    "burnish-cli",
+    "monia-cli",
     "react-cli",
     "vue-cli",
     "create-react-app",
@@ -33,14 +33,14 @@
     "lint-fix": "eslint . --fix --ext .js,.ts",
     "format": "prettier --write \"bin/**/*.ts\" \"lib/**/*.ts\" \"typings/**/*.ts\"",
     "commit": "git-cz",
-    "start": "ts-node bin/burnish-cli.ts",
+    "start": "ts-node bin/monia-cli.ts",
     "watch": "tsc -w .",
     "build": "tsc -p ."
   },
   "bin": {
-    "burnish-cli": "bin/burnish-cli.js"
+    "monia": "bin/monia-cli.js"
   },
-  "repository": "https://github.com/xieyezi/burnish-cli.git",
+  "repository": "https://github.com/xieyezi/monia-cli.git",
   "author": "xieyezi",
   "license": "ISC",
   "dependencies": {

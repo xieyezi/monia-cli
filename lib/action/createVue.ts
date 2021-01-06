@@ -70,7 +70,7 @@ const createVueApp = async (projectName: string, targetDir: string) => {
 	console.log(chalk.white(`\n\n✨  Creating project in ${chalk.yellow(targetDir)}.`))
 	console.log(chalk.white(`\n🗃  Initializing git repository....\n`))
 	const spinner = Ora({
-		text: `Download template from burnish git repository... This might take a while....\n`
+		text: `Download template from monia git repository... This might take a while....\n`
 	})
 	spinner.start()
 	downloadFromGithub(vueVersion === 'Vue3' ? REMOTE_URL.VUE3 : REMOTE_URL.VUE2, projectName)
@@ -111,7 +111,7 @@ const createVueApp = async (projectName: string, targetDir: string) => {
 								? chalk.cyan(`${chalk.gray('$')} yarn start\n\n`)
 								: chalk.cyan(`${chalk.gray('$')} npm run start\n\n`)
 						)
-						console.log(chalk.white(figlet.textSync('brnish-cli')))
+						console.log(chalk.white(figlet.textSync('monia-cli')))
 					}
 					process.exit()
 				})
