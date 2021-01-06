@@ -5,7 +5,7 @@ This is one cli that supports Vue, React, and Flutter at the same time.
 
 You may have questions 🤔️: Does `flutter` also count as front-end?
 
-To tell you the truth, flutter is the official front-end team of Google. Unfortunately, the front-end er is in constant toss.
+To tell you the truth, flutter is the official front-end team of Google.
 
 So `burnish-cli` is here.
 
@@ -113,18 +113,25 @@ Commands:
 ```
 .
 ├── README.md
-├── babel.config.js
+├── commitlint.config.js
+├── index.html
 ├── package.json
 ├── public
 ├── src
-│   ├── App.vue
-│   ├── assets
-│   ├── components
-│   ├── main.js
-│   ├── router
-│   ├── store
-│   └── views
+│   ├── App.vue
+│   ├── assets
+│   ├── components
+│   ├── config
+│   ├── directive
+│   ├── hooks
+│   ├── main.ts
+│   ├── router
+│   ├── store
+│   ├── views
+│   └── vue-shim.d.ts
+├── tsconfig.json
+├── vite.config.ts
+├── yarn-error.log
 └── yarn.lock
-
 
 ```

@@ -9,6 +9,18 @@ import { downloadFromGithub } from '../utils'
 import REMOTE_URL from '../value'
 
 const createVueApp = async (projectName: string, targetDir: string) => {
+	const { vueVersion } = await inquirer.prompt([
+		{
+			type: 'list',
+			name: 'vueVersion',
+			message: 'Which vue version do you want to create',
+			default: 'Vue3',
+			choices: ['Vue3', 'Vue2'],
+			validate(val) {
+				return true
+			}
+		}
+	])
 	const { author, description, version, package_manager } = await inquirer.prompt([
 		{
 			type: 'input',
@@ -61,7 +73,7 @@ const createVueApp = async (projectName: string, targetDir: string) => {
 		text: `Download template from burnish git repository... This might take a while....\n`
 	})
 	spinner.start()
-	downloadFromGithub(REMOTE_URL.VUE, projectName)
+	downloadFromGithub(vueVersion === 'Vue3' ? REMOTE_URL.VUE3 : REMOTE_URL.VUE2, projectName)
 		.then((res) => {
 			fs.readFile(`./${projectName}/package.json`, 'utf8', function(err, data) {
 				if (err) {

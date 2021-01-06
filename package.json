@@ -1,6 +1,6 @@
 {
   "name": "burnish-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A cli for creating vue / react / flutter projects ",
   "keywords": [
     "burnish-cli",
