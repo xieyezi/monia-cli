@@ -41,7 +41,7 @@ Options:
   -h, --help         output usage information
 
 Commands:
-  create <app-name>    Create a project with template from burnish react template
+  create <app-name>    Create a project with template from burnish template
 ```
 
 ### 模版目录
