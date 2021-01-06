@@ -13,7 +13,7 @@ Language: 中文简体 | [EN](https://github.com/xieyezi/burnish-cli)
 ### 特性
   💡 快速生成项目模板   
 
-  ⚡️  支持 `react + ts + hooks` 项目  
+  ⚡️  支持 `react + typescript + hooks` 项目  
 
   🌈 支持`Vue 2.x` 项目      
 

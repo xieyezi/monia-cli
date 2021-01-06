@@ -13,7 +13,7 @@ So `burnish-cli` is here.
 ### feature
   💡 quickly generate project templates   
 
-  ⚡️  support `react + ts + hooks` project
+  ⚡️  support `react + typescript + hooks` project
 
   🌈  support `Vue 2.x` project      
 
