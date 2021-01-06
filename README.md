@@ -1,7 +1,9 @@
 
 Language: EN | [中文简体](README-CN.md)
 
-What is monia? The name of monia is inspired by the goddess of Greek mythology: [Harmonia](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1)). It means "love that connects everyone". So as to achieve a state of harmonious coexistence.
+What is monia? The name of monia is inspired by the goddess of Greek mythology: [Harmonia](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1)). 
+
+It means "love that connects everyone". So as to achieve a state of harmonious coexistence.
 
 So, this is one cli that supports Vue, React, and Flutter at the same time.
 

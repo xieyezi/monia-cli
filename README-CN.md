@@ -1,7 +1,9 @@
 
 Language: 中文简体 | [EN](https://github.com/xieyezi/ monia-cli)
 
-什么是 monia ? monia 取名灵感来自于希腊神话掌握和谐的女神：[哈耳摩尼亚](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1))。寓意着 "联系所有人的爱"。从而达到和谐共存的状态。
+什么是 monia ? monia 取名灵感来自于希腊神话掌握和谐的女神：[哈耳摩尼亚](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1))。
+
+寓意着 "联系所有人的爱"。从而达到和谐共存的状态。
 
 所以这是一款同时支持 Vue、React、Flutter 的脚手架。
 
