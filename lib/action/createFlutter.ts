@@ -54,7 +54,7 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 		// spinner.start()
 		await downloadFromGithub(REMOTE_URL.FLUTTER, COMMON).catch((err) => {
 			console.log(logSymbols.error, err)
-			spinner.fail(chalk.red('Sorry, it must be something error,please check it out. \n'))
+			spinner.fail(chalk.red('Sorry, it may be network error,please check it out. \n'))
 			process.exit(-1)
 		})
 		targetFileDisplayReplace(projectName, `${targetDir}/${COMMON}`)
