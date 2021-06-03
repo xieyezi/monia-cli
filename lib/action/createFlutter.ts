@@ -19,6 +19,18 @@ const regVersion = 'version: 1.0.0+1'
 
 const createFlutterApp = async (projectName: string, targetDir: string) => {
 	try {
+		const { flutterVersion } = await inquirer.prompt([
+			{
+				type: 'list',
+				name: 'flutter version',
+				message: 'Which flutter version do you want to create',
+				default: 'null-safety',
+				choices: ['null-safety', 'without-null-safety'],
+				validate(val) {
+					return true
+				}
+			}
+		])
 		const { description, version } = await inquirer.prompt([
 			{
 				type: 'input',
@@ -52,11 +64,15 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 			text: `Download template from monia git repository... This might take a while....\n`
 		})
 		// spinner.start()
-		await downloadFromGithub(REMOTE_URL.FLUTTER, COMMON).catch((err) => {
+		await downloadFromGithub(
+			flutterVersion === 'null-safety' ? REMOTE_URL.FLUTTER_NULL_SAFETY : REMOTE_URL.FLUTTER_WITHOUT_NULL_SAFETY,
+			COMMON
+		).catch((err) => {
 			console.log(logSymbols.error, err)
 			spinner.fail(chalk.red('Sorry, it may be network error,please check it out. \n'))
 			process.exit(-1)
 		})
+		// TODO: 根据不同版本进行不同的操作
 		targetFileDisplayReplace(projectName, `${targetDir}/${COMMON}`)
 		updateTargetFile(projectName, targetDir, description, version, spinner)
 	} catch (error) {
