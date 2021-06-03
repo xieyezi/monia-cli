@@ -5,8 +5,8 @@ import chalk from 'chalk'
 import figlet from 'figlet'
 import inquirer from 'inquirer'
 import logSymbols from 'log-symbols'
-import { downloadFromGithub } from '../utils'
-import REMOTE_URL from '../value'
+import { downloadFromGithub } from '../../utils'
+import REMOTE_URL from '../../value'
 
 const createVueApp = async (projectName: string, targetDir: string) => {
 	const { vueVersion } = await inquirer.prompt([

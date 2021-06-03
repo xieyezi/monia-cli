@@ -6,8 +6,8 @@ import figlet from 'figlet'
 import inquirer from 'inquirer'
 import logSymbols from 'log-symbols'
 import child_process from 'child_process'
-import { downloadFromGithub } from '../utils'
-import REMOTE_URL from '../value'
+import { downloadFromGithub } from '../../utils'
+import REMOTE_URL from '../../value'
 
 const createReactApp = async (projectName: string, targetDir: string) => {
 	const { author, description, version, package_manager } = await inquirer.prompt([
