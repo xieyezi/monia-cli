@@ -5,7 +5,7 @@ import figlet from 'figlet'
 import replace from 'replace'
 import chalk from 'chalk'
 import child_process from 'child_process'
-import { COMMON_NULL_SAFETY, regDescription, regName, regVersion } from './createFlutter'
+import { COMMON_WITHOUT_NULL_SAFETY, regDescription, regNameWihoutNullsafety, regVersion } from './createFlutter'
 
 // update target file
 const updateWithoutNullSafetyTargetFile = async (
@@ -17,10 +17,10 @@ const updateWithoutNullSafetyTargetFile = async (
 ) => {
 	shell.rm('-rf', `${targetDir}/lib`)
 	shell.rm('-f', `${targetDir}/pubspec.yaml`)
-	shell.mv(`${targetDir}/${COMMON_NULL_SAFETY}/lib`, `${targetDir}`)
-	shell.mv(`${targetDir}/${COMMON_NULL_SAFETY}/pubspec.yaml`, `${targetDir}`)
+	shell.mv(`${targetDir}/${COMMON_WITHOUT_NULL_SAFETY}/lib`, `${targetDir}`)
+	shell.mv(`${targetDir}/${COMMON_WITHOUT_NULL_SAFETY}/pubspec.yaml`, `${targetDir}`)
 	replace({
-		regex: regName,
+		regex: regNameWihoutNullsafety,
 		replacement: `name: ${projectName}`,
 		paths: [`${targetDir}/pubspec.yaml`],
 		recursive: true,
@@ -40,7 +40,7 @@ const updateWithoutNullSafetyTargetFile = async (
 		recursive: true,
 		silent: true
 	})
-	await fs.remove(`${targetDir}/${COMMON_NULL_SAFETY}`)
+	await fs.remove(`${targetDir}/${COMMON_WITHOUT_NULL_SAFETY}`)
 	child_process.execSync('flutter pub get', { stdio: [0, 1], windowsHide: true })
 	spinner.stop()
 	// 依赖安装完成之后给出提示信息

@@ -6,11 +6,13 @@ import child_process from 'child_process'
 import { downloadFromGithub } from '../../utils'
 import REMOTE_URL from '../../value'
 import targetFileDisplayReplace from './targetFileDisplayReplace'
+import updateNullSafetyTargetFile from './updateNullSafetyTargetFile'
 import updateWithoutNullSafetyTargetFile from './updateWithoutNullSafetyTargetFile'
 
 export const COMMON_NULL_SAFETY = 'flutter_getx_template'
 export const COMMON_WITHOUT_NULL_SAFETY = 'fluttertemplate'
-export const regName = 'name: fluttertemplate'
+export const regNameWithNullsafety = 'name: flutter_getx_template'
+export const regNameWihoutNullsafety = 'name: fluttertemplate'
 export const regDescription = 'description: A new Flutter project.'
 export const regVersion = 'version: 1.0.0+1'
 
@@ -76,12 +78,9 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 		console.log('download finishing...')
 		targetFileDisplayReplace(projectName, flutterVersion, `${targetDir}/${templateName}`)
 		// 根据不同版本进行不同的操作
-		if (flutterVersion === 'null-safety') 
-		
-		else 
-			// targetFileDisplayReplace(projectName, `${targetDir}/${COMMON}`)
-			// updateWithoutNullSafetyTargetFile(projectName, targetDir, description, version, spinner)
-			updateWithoutNullSafetyTargetFile(projectName, targetDir, description, version, spinner)
+		if (flutterVersion === 'null-safety')
+			updateNullSafetyTargetFile(projectName, targetDir, description, version, spinner)
+		else updateWithoutNullSafetyTargetFile(projectName, targetDir, description, version, spinner)
 	} catch (error) {
 		console.log(error)
 	}
