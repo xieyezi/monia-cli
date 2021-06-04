@@ -8,8 +8,8 @@ import { pageView, pageController, pageBindings, pageModel } from './template'
 const flutterPageGenerate = async (pageName: string) => {
 	try {
 		const cwd = process.cwd()
-		const targetDir = path.resolve(cwd, pageName)
 		const pageLineName = toBottomLine(pageName)
+		const targetDir = path.resolve(cwd, pageLineName)
 
 		console.log(chalk.white(`\n\n✨  Generate page in ${chalk.yellow(targetDir)}.`))
 		const spinner = Ora({

@@ -4,8 +4,7 @@ const pageView = (pageName: string) => {
 	const pageHumpName = toBigHump(pageName)
 	const pageLineName = toBottomLine(pageName)
 
-	return `
-import 'package:flutter/material.dart';
+	return `import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '${pageLineName}_controller.dart';
 
@@ -25,8 +24,7 @@ class ${pageHumpName}Page extends GetView<${pageHumpName}Controller> {
 const pageController = (pageName: string) => {
 	const pageHumpName = toBigHump(pageName)
 
-	return `
-import 'package:get/get.dart';
+	return `import 'package:get/get.dart';
 
 class ${pageHumpName}Controller extends GetxController {
     final count = 0.obs;
@@ -51,8 +49,7 @@ const pageBindings = (pageName: string) => {
 	const pageHumpName = toBigHump(pageName)
 	const pageLineName = toBottomLine(pageName)
 
-	return `
-import 'package:get/get.dart';
+	return `import 'package:get/get.dart';
 import '${pageLineName}_controller.dart';
 
 class ${pageHumpName}Binding extends Bindings {
