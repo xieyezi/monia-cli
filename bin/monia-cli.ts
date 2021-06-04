@@ -31,7 +31,7 @@ program
  */
 program
 	.command('init <page-name>')
-	.description('  Generate a flutter-getx page from monia.')
+	.description('  Generate new flutter getx page from monia.')
 	.action((name, cmd) => {
 		flutterPageGenerate(name)
 	})
