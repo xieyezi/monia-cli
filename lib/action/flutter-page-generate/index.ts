@@ -29,7 +29,7 @@ const flutterPageGenerate = async (pageName: string) => {
 		writeFileSync(`${targetDir}/${pageLineName}_model.dart`, pageModelContent)
 
 		spinner.stop()
-		console.log(chalk.white(`\n🎉  Successfully generate page`), chalk.yellow(`${pageName}` + '.'))
+		console.log(chalk.white(`\n🎉  Successfully generate page`), chalk.yellow(`${pageName}.`))
 	} catch (error) {
 		console.log(error)
 	}
