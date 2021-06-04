@@ -61,7 +61,7 @@ Options:
 
 Commands:
   create <app-name>    Create a project with template from monia git repository.
-  init <page-name>     Generate a flutter-getx page from monia.
+  init <page-name>     Generate new flutter getx page from monia.
 ```
 
 

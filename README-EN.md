@@ -54,14 +54,15 @@ So, this is one cli that supports Vue, React, and Flutter at the same time.
 ### Options and  Commands
 
 ```
-Usage:  monia <command> [options]
+Usage: monia <command> [options]
 
 Options:
   -V, --version      output the version number
   -h, --help         output usage information
 
 Commands:
-  create <app-name>    Create a project with template from  monia template
+  create <app-name>    Create a project with template from monia git repository.
+  init <page-name>     Generate new flutter getx page from monia.
 ```
 
 ### Command Example
