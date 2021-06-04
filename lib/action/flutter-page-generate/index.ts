@@ -11,7 +11,7 @@ const flutterPageGenerate = async (pageName: string) => {
 		const pageLineName = toBottomLine(pageName)
 		const targetDir = path.resolve(cwd, pageLineName)
 
-		console.log(chalk.white(`\n\n✨  Generate page in ${chalk.yellow(targetDir)}.`))
+		console.log(chalk.white(`✨  Generate page in ${chalk.yellow(targetDir)}.`))
 		const spinner = Ora({
 			text: `Generating, it's will not be wait long...\n`
 		})
