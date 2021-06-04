@@ -11,13 +11,13 @@ Language: 中文简体 | [English](README-EN.md)
 ### 特性
   💡 快速生成项目模板   
 
-  ⚡️  支持 `react + typescript + hooks` 项目  
+  ⚡️  支持 `react + typescript + hooks`
 
-  🌈 支持`Vue 2.x` 项目      
+  🌈 支持`Vue 2.x`    
 
-  🛠️ 支持 `Vue 3.x` 项目(`vite + typescript`)         
+  🛠️ 支持 `Vue 3.x` (`vite + typescript`)         
 
-  🔩 支持 `flutter` + `getx` 项目(现已更新空安全)        
+  🔩 支持 `flutter` + `getx`(现已更新空安全)        
 
   🌟 错误提示       
  
