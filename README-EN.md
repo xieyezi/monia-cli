@@ -1,41 +1,41 @@
 
-Language: 中文简体 | [EN](https://github.com/xieyezi/monia-cli)
+Language: EN | [中文简体](https://github.com/xieyezi/monia-cli)
 
-什么是 monia ? monia 取名灵感来自于希腊神话掌握和谐的女神：[哈耳摩尼亚](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1))。
+What is monia? The name of monia is inspired by the goddess of Greek mythology: [Harmonia](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1)). 
 
-寓意着 "联系所有人的爱"。从而达到和谐共存的状态。
+It means "love that connects everyone". So as to achieve a state of harmonious coexistence.
 
-所以这是一款同时支持 Vue、React、Flutter 的脚手架。
+So, this is one cli that supports Vue, React, and Flutter at the same time.
 
-你可能会有疑问🤔️ :  `flutter` 也算前端吗?
+You may have questions 🤔️: Does `flutter` also count as front-end?
 
-实话告诉你吧，flutter 就是 谷歌官方前端团队搞出来的.很不幸，前端er 就是处于不断的折腾中.
+To tell you the truth, flutter is the official front-end team of Google.
 
-所以 ` monia-cli` 他来了.
+So ` monia-cli` is here.
 
-> 注：使用 ` monia-cli` 创建 `flutter`项目之前，请确保你的本地已经安装了`flutter`的开发环境.
-### 特性
-  💡 快速生成项目模板   
+>Note: Before using ` monia-cli` to create a `flutter` project, please make sure you have installed the `flutter` development environment locally.
+### feature
+  💡 quickly generate project templates   
 
-  ⚡️  支持 `react + typescript + hooks` 项目  
+  ⚡️  support `react + typescript + hooks` project
 
-  🌈 支持`Vue 2.x` 项目      
+  🌈  support `Vue 2.x` project      
 
-  🛠️ 支持 `Vue 3.x` 项目(`vite + typescript`)         
+  🛠️  support `Vue 3.x` project (`vite + typescript`)        
 
-  🔩 支持 `flutter` 项目        
+  🔩 support `flutter` project        
 
-  🌟 错误提示       
+  🌟 error message       
  
-  🔗 命令联想☁         
+  🔗 command Association     
 
-### 安装
+### install
 
  ```js
   yarn global add  monia-cli  ||  npm install -g  monia-cli
  ```
 
-### 参数和命令 
+### Options and  Commands
 
 ```
 Usage:  monia <command> [options]
@@ -48,7 +48,7 @@ Commands:
   create <app-name>    Create a project with template from  monia template
 ```
 
-### 模版目录
+### Template directory
 
 #### flutter 
 

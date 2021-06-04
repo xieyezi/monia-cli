@@ -1,41 +1,38 @@
 
-Language: EN | [中文简体](README-CN.md)
+Language: 中文简体 | [English](README-EN.md)
 
-What is monia? The name of monia is inspired by the goddess of Greek mythology: [Harmonia](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1)). 
+什么是 monia ? monia 取名灵感来自于希腊神话掌握和谐的女神：[哈耳摩尼亚](https://zh.wikipedia.org/wiki/%E5%93%88%E8%80%B3%E6%91%A9%E5%B0%BC%E4%BA%9E_(%E5%B8%8C%E8%87%98%E7%A5%9E%E8%A9%B1))。
 
-It means "love that connects everyone". So as to achieve a state of harmonious coexistence.
+寓意着 "联系所有人的爱"。从而达到和谐共存的状态。
 
-So, this is one cli that supports Vue, React, and Flutter at the same time.
+所以这是一款同时支持 Vue、React、Flutter 的脚手架。
 
-You may have questions 🤔️: Does `flutter` also count as front-end?
+> 注：使用 ` monia-cli` 创建 `flutter`项目之前，请确保你的本地已经安装了`flutter`的开发环境.
+### 特性
+  💡 快速生成项目模板   
 
-To tell you the truth, flutter is the official front-end team of Google.
+  ⚡️  支持 `react + typescript + hooks` 项目  
 
-So ` monia-cli` is here.
+  🌈 支持`Vue 2.x` 项目      
 
->Note: Before using ` monia-cli` to create a `flutter` project, please make sure you have installed the `flutter` development environment locally.
-### feature
-  💡 quickly generate project templates   
+  🛠️ 支持 `Vue 3.x` 项目(`vite + typescript`)         
 
-  ⚡️  support `react + typescript + hooks` project
+  🔩 支持 `flutter` + `getx` 项目(现已更新空安全)        
 
-  🌈  support `Vue 2.x` project      
-
-  🛠️  support `Vue 3.x` project (`vite + typescript`)        
-
-  🔩 support `flutter` project        
-
-  🌟 error message       
+  🌟 错误提示       
  
-  🔗 command Association     
+  🔗 命令联想☁         
 
-### install
+
+> flutter 现有更新至空安全，主要架构为`flutter v2.x + getx4.x`
+
+### 安装
 
  ```js
   yarn global add  monia-cli  ||  npm install -g  monia-cli
  ```
 
-### Options and  Commands
+### 参数和命令 
 
 ```
 Usage:  monia <command> [options]
@@ -48,7 +45,7 @@ Commands:
   create <app-name>    Create a project with template from  monia template
 ```
 
-### Template directory
+### 模版目录
 
 #### flutter 
 

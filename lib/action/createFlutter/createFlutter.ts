@@ -74,14 +74,14 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 		})
 
 		console.log('download finishing...')
-
+		targetFileDisplayReplace(projectName, flutterVersion, `${targetDir}/${templateName}`)
 		// 根据不同版本进行不同的操作
-		if (flutterVersion === 'null-safety') {
-			targetFileDisplayReplace(projectName, flutterVersion, `${targetDir}/${templateName}`)
-		} else {
+		if (flutterVersion === 'null-safety') 
+		
+		else 
 			// targetFileDisplayReplace(projectName, `${targetDir}/${COMMON}`)
 			// updateWithoutNullSafetyTargetFile(projectName, targetDir, description, version, spinner)
-		}
+			updateWithoutNullSafetyTargetFile(projectName, targetDir, description, version, spinner)
 	} catch (error) {
 		console.log(error)
 	}
