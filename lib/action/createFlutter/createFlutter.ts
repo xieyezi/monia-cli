@@ -60,9 +60,11 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 
 		// 切换当前目录到目标文件夹
 		process.chdir(`./${projectName}`)
+
 		const spinner = Ora({
 			text: `Download template from monia git repository... This might take a while....\n`
 		})
+		spinner.start()
 
 		const remoteUrl =
 			flutterVersion === 'null-safety' ? REMOTE_URL.FLUTTER_NULL_SAFETY : REMOTE_URL.FLUTTER_WITHOUT_NULL_SAFETY
@@ -75,7 +77,6 @@ const createFlutterApp = async (projectName: string, targetDir: string) => {
 			process.exit(-1)
 		})
 
-		console.log('download finishing...')
 		targetFileDisplayReplace(projectName, flutterVersion, `${targetDir}/${templateName}`)
 		// 根据不同版本进行不同的操作
 		if (flutterVersion === 'null-safety')

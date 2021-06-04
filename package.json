@@ -52,11 +52,12 @@
     "fs-extra": "^8.1.0",
     "inquirer": "^7.0.0",
     "ora": "^4.0.3",
-    "semver": "^7.1.1",
     "replace": "^1.2.0",
+    "semver": "^7.1.1",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
+    "@types/fs-extra": "^9.0.11",
     "@types/node": "^12.12.22",
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.0.3",

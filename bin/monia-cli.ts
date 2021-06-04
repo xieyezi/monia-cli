@@ -4,6 +4,7 @@ import chalk from 'chalk'
 import program from 'commander'
 import didYouMean from 'didYouMean'
 import create from '../lib/create'
+import flutterPageGenerate from '../lib/action/flutter-page-generate'
 import { checkNodeVersion, suggestCommands, enhanceErrorMessages } from '../lib/utils'
 
 const requiredVersion = config.engines.node
@@ -15,7 +16,7 @@ didYouMean.threshold = 0.6
 checkNodeVersion(requiredVersion, '@monia/cli')
 
 /**
- * start create app
+ * create app
  */
 program.version(config.version).usage('<command> [options]')
 program
@@ -24,6 +25,17 @@ program
 	.action((name, cmd) => {
 		create(name)
 	})
+
+/**
+ * generate flutter page
+ */
+program
+	.command('init <page-name>')
+	.description('  Generate a flutter-getx page from monia.')
+	.action((name, cmd) => {
+		flutterPageGenerate(name)
+	})
+
 /***
  * output help information on unknown commands
  */
