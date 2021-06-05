@@ -4,6 +4,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /dist
-/vscode-extension/monia/node_modules
-/vscode-extension/monia/dist
-/vscode-extension/monia/out
+/vscode-extension/node_modules
+/vscode-extension/dist
+/vscode-extension/out
