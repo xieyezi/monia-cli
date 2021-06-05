@@ -8,6 +8,8 @@
 ![example](example.gif)
 
 
+注意：当你想生成一个新页面时，命名尽量采用下划线命名方式（虽然你输入大驼峰或者小驼峰 `monia`也能正确处理，但是我们不建议你这样做）。
+
 模版来自：[monia-cli](https://github.com/xieyezi/monia-cli)
 
 `monia-cli` 是一款同时支持 `Vue`、`React`、`Flutter` 的脚手架。
