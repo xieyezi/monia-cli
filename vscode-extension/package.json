@@ -1,5 +1,5 @@
 {
-	"name": "monia-getx-page-template",
+	"name": "monia-getx-template",
 	"displayName": "flutter getx page generator - @github/xieyezi",
 	"description": "Click generate button to generate flutter getx page in workspace lib/pages.",
 	"version": "1.0.0",
