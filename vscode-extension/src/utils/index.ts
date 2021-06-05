@@ -6,6 +6,8 @@ import { InputBoxOptions, window } from 'vscode'
 const generateStatusBar = (text: string, command: string) => {
 	const button = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left)
 	button.text = text
+	button.tooltip='Generate new flutter getx page from monia.'
+	button.color= '#fdcb6e'
 	button.command = command
 	button.show()
 }

@@ -1,19 +1,8 @@
 {
-	"name": "monia",
-	"displayName": "monia",
-	"description": "generate flutter getx page",
+	"name": "monia-getx-page-template",
+	"displayName": "flutter getx page generator - @github/xieyezi",
+	"description": "Click generate button to generate flutter getx page in workspace lib/pages.",
 	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.56.0"
-	},
-	"publisher": "xieyezi",
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"*"
-	],
-	"main": "./dist/extension.js",
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
 		"compile": "webpack",
@@ -26,6 +15,31 @@
 		"test": "node ./out/test/runTest.js",
 		"format": "prettier --write \"src/**/*.ts\""
 	},
+	"engines": {
+		"vscode": "^1.56.0"
+	},
+	"publisher": "xieyezi",
+	"icon": "logo.png",
+	"categories": [
+		"Programming Languages",
+        "Snippets"
+	],
+	"activationEvents": [
+		"workspaceContains:**/pubspec.yaml"
+	],
+	"main": "./dist/extension.js",
+	"keywords": [
+		"flutter",
+		"dart",
+		"getx",
+		"template",
+		"generator",
+		"state-management"
+	],
+	"repository": {
+		"url": "https://github.com/xieyezi/monia-cli"
+	},
+	"homepage": "https://github.com/xieyezi/monia-cli",
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.2.2",
