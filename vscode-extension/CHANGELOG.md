@@ -1,9 +1,4 @@
-# Change Log
+## [1.0.0] - [2021-06-05]
 
-All notable changes to the "monia" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- 根据`monia cli` 完成第一版插件
+- 提供 `monia-generate` 命令
