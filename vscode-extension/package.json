@@ -2,7 +2,7 @@
 	"name": "monia-getx-page-template",
 	"displayName": "flutter getx page generator - @github/xieyezi",
 	"description": "Click generate button to generate flutter getx page in workspace lib/pages.",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"scripts": {
 		"vscode:prepublish": "yarn run package",
 		"compile": "webpack",
