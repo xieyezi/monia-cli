@@ -5,3 +5,5 @@ yarn-debug.log*
 yarn-error.log*
 /dist
 /vscode-extension/monia/node_modules
+/vscode-extension/monia/dist
+/vscode-extension/monia/out
