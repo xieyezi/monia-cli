@@ -129,6 +129,14 @@ generate /Users/xieyezi/Desktop/flutter_demo/lib/pages/detail/detail_binding.dar
 ```
 > 注意：当你想生成一个新的`flutter` 新页面时，命名尽量采用`下划线`命名方式（虽然你输入`大驼峰`或者`小驼峰` `monia`也能正确处理，但是我们不建议你这样做）。
 
+### vscode 插件
+
+对于`flutter-getx-template`，`monia` 还提供了`vscode` 插件: [monia-vscode-extension](https://marketplace.visualstudio.com/items?itemName=xieyezi.monia-getx-template)
+
+点击左下角的`monia-generate` 文字按钮，输入`pageName`，即可在`pages`目录下新建一个`flutter getx page`：
+
+![example.gif](https://i.loli.net/2021/06/05/rmyXNpOPCLISMu4.gif)
+
 ### 模版目录
 
 #### flutter + getx
